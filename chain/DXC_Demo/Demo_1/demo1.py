@@ -1,9 +1,8 @@
 from transformers import pipeline
 import os
-os.environ['CURL_CA_BUNDLE'] = ''
 
-pipe = pipeline("text-classification",
-                token='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',
-                trust_remote_code=True,
-                device_map="auto")
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
+
+pipe = pipeline("text-classification", token='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')
 pipe("This restaurant is awesome")
