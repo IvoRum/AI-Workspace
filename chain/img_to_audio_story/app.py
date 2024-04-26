@@ -2,7 +2,7 @@ from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer
 
 def imgToTest(url):
     image_to_text = pipeline("image-to-text", model="Salesforce/blip-image-captioning-base",
-                             token='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')
+                             token='TOKEN')
 
     test = image_to_text(url)[0]["Generated_text"]
 
