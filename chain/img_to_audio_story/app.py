@@ -14,7 +14,7 @@ def generateStory(scenario):
     model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
     tokenizer = AutoTokenizer.from_pretrained(model_id)
 
-    model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto",token='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')
+    model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto",token='TOKEN')
 
     messages = [
         {"role": "user", "content": "What is your favourite condiment?"},
