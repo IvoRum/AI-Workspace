@@ -7,7 +7,7 @@ Image.open(BytesIO(requests.get(image_url).content))
 
 from transformers import pipeline
 
-estimator = pipeline(task="depth-estimation", model="Intel/dpt-large", token='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')
+estimator = pipeline(task="depth-estimation", model="Intel/dpt-large", token='TOKEN')
 result = estimator(images=image_url)
 result
 
