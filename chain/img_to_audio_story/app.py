@@ -2,7 +2,7 @@ from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer
 
 def imgToTest(url):
     image_to_text = pipeline("image-to-text", model="Salesforce/blip-image-captioning-base",
-                             token='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')
+                             token='TOKEN')
 
     test = image_to_text(url)[0]["Generated_text"]
 
@@ -14,7 +14,7 @@ def generateStory(scenario):
     model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
     tokenizer = AutoTokenizer.from_pretrained(model_id)
 
-    model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto",token='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')
+    model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto",token='TOKEN')
 
     messages = [
         {"role": "user", "content": "What is your favourite condiment?"},

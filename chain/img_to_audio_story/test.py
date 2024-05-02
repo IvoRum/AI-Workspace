@@ -5,7 +5,7 @@ import urllib.request
 # Disable SSL certificate verification
 ssl_context = ssl._create_unverified_context()
 
-classifier= pipeline('sentiment-analysis',token='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')
+classifier= pipeline('sentiment-analysis',token='TOKEN')
 
 pos='I love dogs'
 neg='I really dog'
